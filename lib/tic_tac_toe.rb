@@ -45,10 +45,6 @@ def turn(board)
     turn(board)
   end
 
-  until valid_move?(board, index)
-    turn(board)
-  end
-  
   char = current_player(board)
   move(board, index, char)
   display_board(board)
