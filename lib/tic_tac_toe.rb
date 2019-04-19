@@ -96,3 +96,10 @@ end
 def over?(board)
   full?(board) || won?(board)
 end
+
+def winner(board)
+  winning_position = won?(board)
+  if winning_position
+    board[winning_position[0]]
+  end
+end
