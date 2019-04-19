@@ -39,15 +39,12 @@ def turn(board)
   index = input_to_index(input)
   
   if valid_move?(board, index)
+    char = current_player(board)
     move(board, index)
     display_board(board)
   else
     turn(board)
   end
-
-  char = current_player(board)
-  move(board, index, char)
-  display_board(board)
 end
 
 def turn_count(board)
