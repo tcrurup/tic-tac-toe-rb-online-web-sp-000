@@ -59,3 +59,30 @@ def current_player(board)
   end
 end
 
+def won?(board)
+  
+  x_positions = []
+  o_positions = []
+  index = 0;
+  
+  board.each do |board_space|
+    if board_space == 'X'
+      x_positions << index
+    elsif board_space == 'O'
+      o_positions << index
+    end
+    index+=1
+  end
+      
+  WIN_COMBINATIONS.each do |winning_position|
+    if(
+      winning_position.all? {|pos| x_positions.include?(pos)} || 
+      winning_position.all? {|pos| o_positions.include?(pos)}
+    )
+      winning_position
+    else
+      false
+    end
+  end
+end
+
