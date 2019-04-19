@@ -8,3 +8,6 @@ WIN_COMBINATIONS = [
   [6,4,2], #diagonal foward slash
   [0,4,8], #diagonal back slash
 ]
+
+def display_board(board)
+  
