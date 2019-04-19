@@ -47,5 +47,5 @@ def turn(board)
 end
 
 def turn_count(board)
-  board.reject(|char| char == " "  || char.nil?).length
+  board.reject(|char| char == " "  || char == nil).length
 end
