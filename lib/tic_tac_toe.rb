@@ -45,3 +45,7 @@ def turn(board)
   move(board, index, char)
   display_board(board)
 end
+
+def turn_count(board)
+  board.reject(" ").length
+end
