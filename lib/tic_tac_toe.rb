@@ -81,8 +81,7 @@ def won?(board)
     )
       return winning_position
     end
-    
-    return false
   end
+  return false
 end
 
