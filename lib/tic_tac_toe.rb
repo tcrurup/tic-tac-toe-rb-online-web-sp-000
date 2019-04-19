@@ -79,10 +79,10 @@ def won?(board)
       winning_position.all? {|pos| x_positions.include?(pos)} || 
       winning_position.all? {|pos| o_positions.include?(pos)}
     )
-      winning_position
-    else
-      false
+      return winning_position
     end
+    
+    return false
   end
 end
 
