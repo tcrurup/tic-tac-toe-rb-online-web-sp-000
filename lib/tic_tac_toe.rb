@@ -9,6 +9,18 @@ WIN_COMBINATIONS = [
   [0,4,8], #diagonal back slash
 ]
 
+def play(board)
+  until over?(board)
+    turn(board)
+  end
+  
+  if won?(board)
+    puts "Congratulations #{winner}, you've won the game!"
+  else
+    puts "The game is a draw!"
+  end
+end
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
